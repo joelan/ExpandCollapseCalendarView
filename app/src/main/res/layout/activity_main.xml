@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <net.cachapa.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:el_duration="500"
+        app:el_expanded="false">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/calendartitle"
+        android:background="#a4abaf"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/last"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="2010年10月"
+            android:gravity="center"
+            android:id="@+id/currenttime"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/next"
+            android:src="@android:drawable/ic_media_next"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_expandable="true"
+        android:background="#a4abaf"
+        android:layout_below="@+id/calendartitle"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/calendarView"
+
+ />
+    </net.cachapa.expandablelayout.ExpandableLinearLayout>
+</RelativeLayout>
